@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin | Events | Kaspars Andžāns "FinalTriumph"</title>
+    <link rel="stylesheet" href="/public/css/Admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+</head>
+
+<body>
+    
+<div id="content">
+    
+    <div id="header">
+        <a href="/admin">Projects</a>
+        <a href="/admin/events" id="act_h_a">Events</a>
+        <a href="/admin/logout">Logout</a>
+    </div>
+    
+    <form action="/admin/event/add" method="POST">
+        <input type="text" name="time" placeholder="Time ..." required />
+        <input type="text" name="title" placeholder="Title ..." required />
+        <textarea name="description" placeholder="Description ..." rows="5" required></textarea>
+        <input type="submit" value="Add Event" />
+    </form>
+    
+    <hr />
+    
+    <div id="events_div"></div>
+
+</div> 
+    
+<script type="text/javascript" src="/public/js/AdminEvents.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin | Projects | Kaspars Andžāns "FinalTriumph"</title>
+    <link rel="stylesheet" href="/public/css/Admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+</head>
+
+<body>
+<div id="content">
+    
+    <div id="header">
+        <a href="/admin" id="act_h_a">Projects</a>
+        <a href="/admin/events">Events</a>
+        <a href="/admin/logout">Logout</a>
+    </div>
+    
+    <form action="/admin/project/add" method="POST">
+        <input type="text" name="title" placeholder="Title ..." required />
+        <input type="text" name="languages" placeholder="Languages ..." required />
+        <input type="text" name="image" placeholder="Image link ..." required />
+        <input type="text" name="link" placeholder="Project link ..." required />
+        <input type="text" name="category" placeholder="Category ..." required />
+        <textarea name="description" placeholder="Description ..." rows="5" required /></textarea>
+        <input type="submit" value="Add Project" class="inp_txt" />
+    </form>
+    
+    <hr />
+    
+    <div id="projects_div"></div>
+
+</div>   
+
+<script type="text/javascript" src="/public/js/AdminProjects.js"></script>
+
+</body>
+</html>

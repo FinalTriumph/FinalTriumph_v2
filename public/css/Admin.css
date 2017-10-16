@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    text-align: center;
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('/public/img/a_back.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+#login {
+    height: 100vh;
+    width: 100%;
+    display: table;
+}
+#login_form {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+#login_h {
+    font-size: 1.5em;
+    color: #fff;
+    text-shadow: 0px 1px 3px #000;
+}
+#login_form input {
+    display: block;
+    margin: 1em auto;
+    padding: 0.7em;
+    width: 20em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 0px 5px 4px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 4px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 4px -5px rgba(0,0,0,0.75);
+}
+#login_form input:hover,
+#login_form input:focus {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+#login_form input[type=submit] {
+    margin-top: 2em;
+    margin-bottom: 10em;
+    cursor: pointer;
+}
+/*/////*/
+#content {
+    min-height: 100vh;
+    background-color: rgba(10, 10, 10, 0.5);
+    padding-bottom: 3em;
+}
+#header {
+    text-align: right;
+    padding: 1.2em;
+    margin-bottom: 2em;
+}
+#header a {
+    color: #999;
+    text-decoration: none;
+    margin: 0;
+    padding: 0.5em 2em;
+}
+#header a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+#act_h_a {
+    color: #000 !important;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 3em;
+    -webkit-box-shadow: 0px 2px 4px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 4px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 4px -4px rgba(0,0,0,0.75);
+}
+form input,
+form textarea {
+    display: block;
+    margin: 1em auto;
+    padding: 0.7em;
+    width: 50em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    -webkit-box-shadow: 0px 5px 4px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 4px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 4px -5px rgba(0,0,0,0.75);
+}
+form input[type=submit],
+form input[type=submit]{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    cursor: pointer;
+}
+form input:hover,
+form input:focus,
+form textarea:hover,
+form textarea:focus {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+hr {
+    width: 90%;
+    margin: 3em auto;
+}
