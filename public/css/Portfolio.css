@@ -7,14 +7,16 @@ body {
     -o-background-size: cover;
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
 }
 a {
-    color: #222;
+    color: #444;
     text-decoration: none;
 }
 h1 {
     margin-top: 0.9em;
-    color: #000;
+    color: #222;
+    text-shadow: 0px 1px 1px #fff;
 }
 #head {
     background-color: #eee;
@@ -25,18 +27,18 @@ h1 {
     display: inline-block;
 }
 #h_left {
-    opacity: 0.8;
+    opacity: 0.9;
     transition: all 0.3s ease;
 }
 #h_left:hover {
-    opacity: 0.9;
+    opacity: 1;
 }
 #h_left img {
-    margin: 0.7em 0.5em 0.7em 2em;
+    margin: 0.7em 0.5em 0.7em 2.5em;
     transition: all 0.3s ease;
 }
 #h_left:hover img{
-    margin-right: 0.7em;
+    margin-right: 1em;
 }
 .left_inl {
     display: inline-block;
@@ -47,7 +49,7 @@ h1 {
 }
 #h_right {
     float: right;
-    margin: 2em 3em 1em 1em;
+    margin: 2em 3.5em 1em 1em;
 }
 .h_an {
     border-bottom: 1px solid #fff;
@@ -56,9 +58,10 @@ h1 {
     padding-bottom: 0.2em;
     margin: 0em 1.2em;
     font-size: 1em;
-    -webkit-box-shadow: 0px 3px 4px -5px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 3px 4px -5px rgba(0,0,0,0.5);
-    box-shadow: 0px 3px 4px -5px rgba(0,0,0,0.5);
+    text-shadow: 0px 1px 1px #fff;
+    -webkit-box-shadow: 0px 3px 4px -4px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 3px 4px -4px rgba(0,0,0,0.3);
+    box-shadow: 0px 3px 4px -4px rgba(0,0,0,0.3);
 }
 #h_act_an {
     border-color: #777;

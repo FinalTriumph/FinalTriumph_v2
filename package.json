@@ -1,7 +1,7 @@
 {
   "name": "finaltriumph",
   "version": "1.0.0",
-  "description": "Personal Portfolio Website",
+  "description": "Personal Website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
