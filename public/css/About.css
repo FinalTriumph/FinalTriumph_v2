@@ -18,7 +18,7 @@ button:focus {
     outline: none;
 }
 h1 {
-    margin-top: 0.9em;
+    margin-top: 0.7em;
     color: #222;
     text-shadow: 0px 1px 1px #fff;
 }
@@ -38,7 +38,7 @@ h1 {
     opacity: 1;
 }
 #h_left img {
-    margin: 0.7em 0.5em 0.7em 2.5em;
+    margin: 0.9em 0.5em 0.9em 2.5em;
     transition: all 0.3s ease;
 }
 #h_left:hover img{
@@ -49,11 +49,11 @@ h1 {
     vertical-align: middle;
     font-family: 'Prosto One', cursive;
     font-weight: normal;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 #h_right {
     float: right;
-    margin: 2em 3.5em 1em 1em;
+    margin: 1.5em 3.5em 1em 1em;
 }
 .h_an {
     border-bottom: 1px solid #fff;
@@ -61,7 +61,7 @@ h1 {
     padding: 0 0.2em;
     padding-bottom: 0.2em;
     margin: 0em 1.2em;
-    font-size: 1em;
+    font-size: 0.9em;
     text-shadow: 0px 1px 1px #fff;
     -webkit-box-shadow: 0px 3px 4px -4px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 3px 4px -4px rgba(0,0,0,0.3);
@@ -82,18 +82,16 @@ h1 {
     background-color: #eee;
     background-color: rgba(255, 255, 255, 0.95);
     text-shadow: 0px 1px 1px #fff;
-    padding: 2em 0;
-    -webkit-box-shadow: 0px 3px 4px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 3px 4px -2px rgba(0,0,0,0.75);
-    box-shadow: 0px 3px 4px -2px rgba(0,0,0,0.75);
+    padding: 2.5em 0;
+    padding-top: 2.2em;
 }
 #about_photo {
     border-radius: 50%;
-    border: 7px solid #fff;
+    border: 5px solid #fff;
     -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3);
     box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.3);
-    margin-right: 2.5em;
+    margin-right: 2em;
 }
 #about_top_text {
     text-align: left;
@@ -107,6 +105,7 @@ h3 {
     font-weight: normal;
     margin: 0;
     padding: 0.5em 3em 0.5em 0.5em;
+    font-size: 1em;
 }
 #h3_top {
     border-bottom: 1px solid #fff;
@@ -121,6 +120,7 @@ h3 {
     margin: auto;
     text-align: justify;
     text-indent: 2em;
+    font-size: 0.9em;
 }
 #about_long_text a {
     color: #000;
@@ -136,14 +136,14 @@ h3 {
     background-color: #eee;
     background-color: rgba(0, 0, 0, 0);
     border: none;
-    font-size: 4em;
+    font-size: 3.5em;
     cursor: pointer;
     color: #fff;
-    text-shadow: 1px 0px 1px #999;
+    text-shadow: 1px 0px 2px #999;
     transition: all 0.3s ease;
 }
 #top_about_arrow:hover {
-    text-shadow: 2px 0px 1px #999;
+    text-shadow: 2px 0px 2px #999;
 }
 /**/
 #timeline_bg {
@@ -180,9 +180,13 @@ h3 {
     margin-right: 2em;
     transition: color 0.3s ease;
 }
+.tmln_contr_btn:hover {
+    text-decoration: underline;
+}
 .tmln_contr_btn[disabled] {
     cursor: default;
     color: #777;
+    pointer-events: none;
 }
 #events {
     max-width: 840px;
@@ -194,9 +198,12 @@ h3 {
     display: none;
 }
 .event_div {
-    margin: 2em 0em;
-    border: 1px solid #555;
+    margin: 1.5em 0em;
+    border: 1px solid #666;
     transition: border-color 0.3s ease;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.75);
 }
 .event_h_p {
     background-color: #4b4646;
@@ -232,4 +239,51 @@ h3 {
 }
 .indent {
     margin-right: 1em;
+}
+.about_cert_img {
+    max-width: 30%;
+    margin: 1em 1%;
+    transition: box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+}
+.about_cert_img:hover {
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+}
+#btt_btn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: -0.6em 1.5em;
+    cursor: pointer;
+    border: 1px solid #666;
+    border-radius: 2px;
+    border-color: rgba(0, 0, 0, 0);
+    background-color: #444;
+    background-color: rgba(40, 40, 40, 0.1);
+    color: #fff;
+    padding: 0.3em 0.7em 0.4em 0.4em;
+    font-size: 2.5em;
+    text-shadow: 1px 0px 1px #000;
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+    transition: border-color 0.3s, background-color 0.3s, box-shadow 0.3s;
+    display: none;
+}
+#btt_btn:hover {
+    border-color: #eee;
+    background-color: #444;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+}
+#footer {
+    margin: 0;
+    padding: 2em;
+    background-color: #eee;
+    background-color: rgba(20, 20, 20, 0.6);
+    border-top: 1px solid #fff;
 }

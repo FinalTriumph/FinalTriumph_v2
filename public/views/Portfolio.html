@@ -13,7 +13,7 @@
     <div id="head">
         <div id="h_left">
             <a href="/">
-                <img src="/public/img/logo_55x55.png" alt="FT Logo" class="left_inl" />
+                <img src="/public/img/logo_45x45.png" alt="FT Logo" class="left_inl" />
                 <h1 class="left_inl">FinalTriumph</h1>
             </a>
         </div>
@@ -25,7 +25,56 @@
     </div>
     
     
-    <h1>This is "Portfolio" route.</h1>
+    <div id="top_content">
+        <img src="/public/img/ss/control.png" alt="Control" class="ss_img" id="ss_controll"/>
+        <img src="/public/img/ss/lb.png" alt="Laravel Blog" class="ss_img ss_img_1" />
+        <img src="/public/img/ss/mr.png" alt="Movie Reviews" class="ss_img ss_img_2 ss_selected" />
+        <img src="/public/img/ss/ni.png" alt="Notes App" class="ss_img ss_img_3" />
+        <button class="ss_lr_btn" id="ss_left" onclick="prevImg()">&#10092;</button>
+        <button class="ss_lr_btn" id="ss_right" onclick="nextImg()">&#10093;</button>
+        <div id="slider_controls">
+            <span class="slide_s slide_s_1" onclick="showImg(1)"></span>
+            <span class="slide_s slide_s_2 slide_s_selected" onclick="showImg(2)"></span>
+            <span class="slide_s slide_s_3 " onclick="showImg(3)"></span>
+        </div>
+    </div>
+    
+    <div id="portfolio_bg">
+        <div id="portfolio_content">
+            
+            <div class="pr_anounc">
+                <h3 class="pr_anounc_h3">Newest Projects</h3>
+                <p class="pr_anounc_p">Created with main focus on PHP / MySQL / Laravel.</p>
+            </div>
+            
+            <div class="projects" id="new_projects"></div>
+            
+            <div class="pr_anounc">
+                <h3 class="pr_anounc_h3">Front End Projects for Free Code Camp</h3>
+                <p class="pr_anounc_p">Created with main focus on HTML / CSS / JavaScript / jQuery.</p>
+            </div>
+            
+            <div class="projects" id="fccfe_projects"></div>
+            
+            <div class="pr_anounc">
+                <h3 class="pr_anounc_h3">Data Visualization Projects for Free Code Camp</h3>
+                <p class="pr_anounc_p">Created with main focus on D3.js / React.js.</p>
+            </div>
+            
+            <div class="projects" id="fccdv_projects"></div>
+            
+            <div class="pr_anounc">
+                <h3 class="pr_anounc_h3">Back End Projects for Free Code Camp</h3>
+                <p class="pr_anounc_p">Created with main focus on Node.js / Express / MongoDB / Mongoose.</p>
+            </div>
+            
+            <div class="projects" id="fccbe_projects"></div>
+            
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src="/public/js/Portfolio.js"></script>
 
 </body>
 </html>
