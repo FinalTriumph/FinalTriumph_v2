@@ -23,14 +23,14 @@ $(document).ready(function() {
         $(".event_h_p").click(function() {
             var eId = $(this).attr('data-id');
             if ($("."+eId).is(":visible")) {
-                $("."+eId).slideUp(500);
+                $("."+eId).slideUp(300);
                 expanded -=1;
                 $(".exp_all").attr("disabled", false);
                 if (expanded === 0) {
                     $(".cl_all").attr("disabled", "disabled");
                 }
             } else {
-                $("."+eId).slideDown(500);
+                $("."+eId).slideDown(300);
                 expanded +=1;
                 $(".cl_all").attr("disabled", false);
                 if (expanded === eventCount) {
@@ -57,7 +57,7 @@ $(document).ready(function() {
     });
     
     $(".exp_all").click(function() {
-        $(".event_d_p").slideDown(500);
+        $(".event_d_p").slideDown(300);
         if ($(this).attr("id") === "btm_exp_all") {
             var int = setInterval(function() {
                 $("html, body").animate({
@@ -66,7 +66,7 @@ $(document).ready(function() {
             }, 1);
             setTimeout(function() {
                 clearInterval(int);
-            }, 500);
+            }, 300);
         }
         $(".exp_all").attr("disabled", "disabled");
         $(".cl_all").attr("disabled", false);
@@ -74,7 +74,7 @@ $(document).ready(function() {
     });
     
     $(".cl_all").click(function() {
-        $(".event_d_p").slideUp(500);
+        $(".event_d_p").slideUp(300);
         $(".cl_all").attr("disabled", "disabled");
         $(".exp_all").attr("disabled", false);
         expanded = 0;

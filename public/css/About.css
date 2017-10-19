@@ -139,11 +139,11 @@ h3 {
     font-size: 3.5em;
     cursor: pointer;
     color: #fff;
-    text-shadow: 1px 0px 2px #999;
+    text-shadow: 1px 0px 2px #444;
     transition: all 0.3s ease;
 }
 #top_about_arrow:hover {
-    text-shadow: 2px 0px 2px #999;
+    text-shadow: 2px 0px 3px #444;
 }
 /**/
 #timeline_bg {
@@ -189,7 +189,7 @@ h3 {
     pointer-events: none;
 }
 #events {
-    max-width: 840px;
+    max-width: 890px;
     padding: 0 30px;
     margin: 2em auto;
     border-left: 1px solid #fff;
@@ -241,8 +241,7 @@ h3 {
     margin-right: 1em;
 }
 .about_cert_img {
-    max-width: 30%;
-    margin: 1em 1%;
+    margin: 1em 2%;
     transition: box-shadow 0.3s ease;
     border: 1px solid #ddd;
 }
@@ -273,7 +272,7 @@ h3 {
     display: none;
 }
 #btt_btn:hover {
-    border-color: #eee;
+    border-color: #ddd;
     background-color: #444;
     background-color: rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);

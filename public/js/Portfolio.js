@@ -16,7 +16,6 @@ function showNextImg() {
     } else {
         actSl +=1;
     }
-    
     swapClasses(actSl);
 }
 
@@ -34,27 +33,28 @@ function nextImg() {
 
 function prevImg() {
     clearInterval(slideshow);
-    
     if (actSl === 1) {
         actSl = 3;
     } else {
         actSl -=1;
     }
-    
     swapClasses(actSl);
-    
     startSlideshow();
 }
 
 function showImg(num) {
     clearInterval(slideshow);
-    
     swapClasses(num);
-    
     actSl = num;
-    
     startSlideshow();
 }
+
+function navigate(target) {
+    $("html, body").animate({
+        scrollTop: $(target).offset().top - $("#proj_nav").outerHeight() + 10
+    }, 1000);
+}
+
 
 $(document).ready(function() {
     startSlideshow();
@@ -62,8 +62,74 @@ $(document).ready(function() {
     $.getJSON(window.location.origin + "/api/projects", function(data) {
         
         for (var i = 0; i < data.length; i++) {
-            $("#"+data[i].category+"_projects").prepend('<div class="project_div"><h3>'+data[i].title+'</h3><p>'+data[i].languages+'</p><img src="'+data[i].image+'" alt="Project Image" class="pr_img_s"/></div>');
+            var lang = data[i].languages.split(" ");
+            var langDiv = '<div class="lang_div">'
+            for (var l = 0; l < lang.length; l++) {
+                langDiv += ('<img src="/public/img/lang/' + lang[l] + '_s.png" alt="' + lang[l] + ' Icon" class="lang_icon_s" />');
+            }
+            langDiv += '</div>';
+            
+            $("#"+data[i].category+"_projects").prepend('<div class="project_div"><img src="' + data[i].image + '" alt="Project Image" class="project_left_side"/><div class="project_right_side"><h3 class="proj_div_h3">' + data[i].title + '</h3>' + langDiv + '<a href="#" class="pr_div_an">Project Description</a><a href="#" class="pr_div_an">View Project</a></div></div>');
+        
         }
+    });
     
+    function navHover() {
+        $(".proj_nav_btn").hover(function() {
+            $(this).addClass("nav_hovered");
+        }, function(){
+            $(this).removeClass("nav_hovered");
+        });
+    }
+    
+    $(window).scroll(function(event) {
+        
+        var scrTop = $(this).scrollTop();
+        
+        if (scrTop > ($("#top_content").outerHeight() / 2 )) {
+            $("#btt_btn").show(500);
+        } else {
+            $("#btt_btn").hide(500);
+        }
+        
+        if (scrTop > ($("#top_content").outerHeight() + $("#proj_nav").outerHeight()) + 20) {
+            $("#proj_nav").css("position", "fixed");
+        } else {
+            $("#proj_nav").css("position", "absolute");
+        }
+        
+        function calcOffset(id) {
+            return $("#"+id).offset().top - $("#proj_nav").outerHeight() - 100;
+        }
+        
+        function changeBordCol(id) {
+            $(".proj_nav_btn").css("border-color", "rgba(0, 0, 0, 0)");
+            $("#"+id).css("border-color", "#ccc");
+            navHover();
+        }
+        
+        if (scrTop >= calcOffset("be_p_d")) {
+            changeBordCol("be_p_d_b");
+            
+        } else if (scrTop >= calcOffset("dv_p_d")) {
+            changeBordCol("dv_p_d_b");
+            
+        } else if (scrTop >= calcOffset("fe_p_d")) {
+            changeBordCol("fe_p_d_b");
+            
+        } else if (scrTop >= calcOffset("new_p_d")) {
+            changeBordCol("new_p_d_b");
+            
+        } else {
+            $(".proj_nav_btn").css("border-color", "rgba(0, 0, 0, 0)");
+            navHover();
+        }
+        
+    });
+    
+    $("#btt_btn").click(function() {
+        $("html, body").animate({
+            scrollTop: $("body").offset().top
+        }, 700);
     });
 });
