@@ -22,6 +22,14 @@ module.exports = function(app) {
         res.sendFile(path + "/public/views/Contact.html");
     });
     
+    app.get("/project", function(req, res) {
+        if (req.query.id) {
+            res.sendFile(path + "/public/views/Project.html");
+        } else {
+            res.redirect("/portfolio");
+        }
+    });
+    
     // Admin
     
     function isLoggedIn (req, res, next) {
@@ -53,7 +61,6 @@ module.exports = function(app) {
             }
             res.redirect('/admin');
         });
-        
     });
     
     app.get("/admin/logout", function(req, res) {
@@ -62,7 +69,6 @@ module.exports = function(app) {
             if (err) console.log(err);
             res.redirect('/admin');
         });
-        
     });
     
     app.post("/admin/project/add", isLoggedIn, function(req, res) {
@@ -81,7 +87,6 @@ module.exports = function(app) {
             });
             
         res.redirect('/admin');
-        
     });
     
     app.post("/admin/project/update", isLoggedIn, function(req, res) {
@@ -102,7 +107,6 @@ module.exports = function(app) {
             
             res.redirect('/admin');
         });
-        
     });
     
     app.post("/admin/project/delete", isLoggedIn, function(req, res) {
@@ -111,7 +115,6 @@ module.exports = function(app) {
             if (err) console.log(err);
             res.redirect('/admin');
         });
-        
     });
     
     app.post("/admin/event/add", isLoggedIn, function(req, res) {
@@ -127,7 +130,6 @@ module.exports = function(app) {
             });
             
         res.redirect('/admin/events');
-        
     });
     
     app.post("/admin/event/update", isLoggedIn, function(req, res) {
@@ -144,7 +146,6 @@ module.exports = function(app) {
             
             res.redirect('/admin/events');
         });
-        
     });
     
     app.post("/admin/event/delete", isLoggedIn, function(req, res) {
@@ -153,7 +154,6 @@ module.exports = function(app) {
             if (err) console.log(err);
             res.redirect('/admin/events');
         });
-        
     });
     
     //API
@@ -164,7 +164,6 @@ module.exports = function(app) {
             if (err) console.log(err);
             res.json(docs);
         });
-        
     });
     
     app.get("/api/projects", function(req, res) {
@@ -173,7 +172,17 @@ module.exports = function(app) {
             if (err) console.log(err);
             res.json(docs);
         });
+    });
+    
+    app.get("/api/singleproject", function(req, res) {
         
+        Project.findById(req.query.id, function(err, doc) {
+            if (err) console.log(err);
+            Project.find( { "category": doc.category }, function(err, docs) {
+                if(err) console.log(err);
+                res.json(docs);
+            });
+        });
     });
     
 };

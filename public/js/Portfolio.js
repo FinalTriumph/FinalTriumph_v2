@@ -69,7 +69,7 @@ $(document).ready(function() {
             }
             langDiv += '</div>';
             
-            $("#"+data[i].category+"_projects").prepend('<div class="project_div"><img src="' + data[i].image + '" alt="Project Image" class="project_left_side"/><div class="project_right_side"><h3 class="proj_div_h3">' + data[i].title + '</h3>' + langDiv + '<a href="#" class="pr_div_an">Project Description</a><a href="#" class="pr_div_an">View Project</a></div></div>');
+            $("#"+data[i].category+"_projects").prepend('<div class="project_div"><img src="' + data[i].image + '" alt="Project Image" class="project_left_side"/><div class="project_right_side"><h3 class="proj_div_h3">' + data[i].title + '</h3>' + langDiv + '<a href="' + window.location.origin + '/project?id=' + data[i]._id + '" class="pr_div_an">Project Description</a><a href="'+ data[i].link +'" class="pr_div_an" target="_blank">View Project</a></div></div>');
         
         }
     });
@@ -92,7 +92,7 @@ $(document).ready(function() {
             $("#btt_btn").hide(500);
         }
         
-        if (scrTop > ($("#top_content").outerHeight() + $("#proj_nav").outerHeight()) + 20) {
+        if (scrTop > ($("#top_content").outerHeight() + $("#proj_nav").outerHeight()) + 25) {
             $("#proj_nav").css("position", "fixed");
         } else {
             $("#proj_nav").css("position", "absolute");
