@@ -10,15 +10,15 @@ $(document).ready(function() {
         eventCount = data.length;
         
         for (var i = 0; i < data.length; i++) {
-            $("#events_desc").prepend('<div class="event_div"><p class="event_h_p" data-id="' + data[i]._id + '">' + data[i].time + ' <span class="event_h_sep">|</span> ' + data[i].title + '</p><p class="event_d_p ' + data[i]._id + '">' + data[i].description + '</p></div>');
-            $("#events_asc").append('<div class="event_div"><p class="event_h_p" data-id="' + data[i]._id + '">' + data[i].time + ' <span class="event_h_sep">|</span> ' + data[i].title + '</p><p class="event_d_p ' + data[i]._id + '">' + data[i].description + '</p></div>');
+            $("#events_desc").prepend('<div class="event_div"><p class="event_h_p" data-id="' + data[i]._id + '">' + data[i].time + '<br /><span class="event_h_t">' + data[i].title + '</span></p><p class="event_d_p ' + data[i]._id + '">' + data[i].description + '</p></div>');
+            $("#events_asc").append('<div class="event_div"><p class="event_h_p" data-id="' + data[i]._id + '">' + data[i].time + '<br /><span class="event_h_t">' + data[i].title + '</span></p><p class="event_d_p ' + data[i]._id + '">' + data[i].description + '</p></div>');
         }
         
-        $(".event_h_p").hover(function() {
-            $(this).parent().css("border-color", "#ddd");
-        }, function() {
-            $(this).parent().css("border-color", "#666");
-        });
+        //$(".event_h_p").hover(function() {
+            //$(this).parent().css("border-color", "#ddd");
+        //}, function() {
+            //$(this).parent().css("border-color", "#666");
+        //});
         
         $(".event_h_p").click(function() {
             var eId = $(this).attr('data-id');
@@ -82,12 +82,12 @@ $(document).ready(function() {
     
     $("#top_about_arrow").click(function() {
         $("html, body").animate({
-            scrollTop: $("#timeline_content").offset().top
+            scrollTop: $("#middle_layer_1_bg").offset().top + 3
         }, 700);
     });
     
     $(window).scroll(function(event) {
-        if ($(this).scrollTop() > ($("#top_content").outerHeight() / 2 )) {
+        if ($(this).scrollTop() > ($("#top_layer_3_content").outerHeight() / 2)) {
             $("#btt_btn").show(500);
         } else {
             $("#btt_btn").hide(500);
