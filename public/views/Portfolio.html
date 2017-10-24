@@ -5,100 +5,111 @@
     <meta charset="UTF-8">
     <title>Portfolio | Kaspars Andžāns "FinalTriumph"</title>
     <link rel="stylesheet" href="/public/css/Portfolio.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Prosto+One&amp;subset=latin-ext" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
 <body>
     <div id="head">
-        <div id="h_left">
-            <a href="/">
-                <img src="/public/img/logo_45x45.png" alt="FT Logo" class="left_inl" />
-                <h1 class="left_inl">FinalTriumph</h1>
-            </a>
-        </div>
-        <div id="h_right">
-            <a href="/about" class="h_an">About</a>
-            <a href="/portfolio" class="h_an" id="h_act_an">Portfolio</a>
-            <a href="/contact" class="h_an">Contact</a>
-        </div>
+        <a href="/" class="h_nav_an">Home</a>
+        <a href="/about" class="h_nav_an">About</a>
+        <a href="/portfolio" class="h_nav_an" id="h_act_an">Portfolio</a>
+        <a href="/contact" class="h_nav_an">Contact</a>
     </div>
     
-    
-    <div id="top_content">
-        <div id="top_width_cont">
-            <div class="ss_img" id="ss_controll">
-                <h3 class="ss_h3" id="ss_c_h3">.</h3>
-                <img src="/public/img/ss/control.png" class="s_img" alt="Control"/>
-                
-            </div>
-            <div class="ss_img ss_img_1">
-                <h3 class="ss_h3" >Laravel Blog </h3>
-                <img src="/public/img/ss/lb.png" alt="Laravel Blog" class="s_img" />
-                
-            </div>
-            <div class="ss_img ss_img_2 ss_selected">
-                <h3 class="ss_h3">Movie Reviews </h3>
-                <img src="/public/img/ss/mr.png" alt="Movie Reviews" class="s_img" />
-                
-            </div>
-            <div class="ss_img ss_img_3">
-                <h3 class="ss_h3">Notes App </h3>
-                <img src="/public/img/ss/ni.png" alt="Notes App" class="s_img" />
-                
-            </div>
-            <button class="ss_lr_btn" id="ss_left" onclick="prevImg()">&#10092;</button>
-            <button class="ss_lr_btn" id="ss_right" onclick="nextImg()">&#10093;</button>
-            <div id="slider_controls">
-                <span class="slide_s slide_s_1" onclick="showImg(1)"></span>
-                <span class="slide_s slide_s_2 slide_s_selected" onclick="showImg(2)"></span>
-                <span class="slide_s slide_s_3 " onclick="showImg(3)"></span>
+    <div id="top_layer_1_bg_img">
+        <div id="top_layer_2_bg">
+            <div id="top_layer_3_content">
+                <div class="ss_img" id="ss_controll">
+                    <h3 class="ss_h3" id="ss_c_h3">.</h3>
+                    <img src="/public/img/ss/control.png" class="s_img" alt="Control"/>
+                    
+                </div>
+                <div class="ss_img ss_img_1">
+                    <a href="#1" class="ss_an"><h3 class="ss_h3" >Laravel Blog </h3></a>
+                    <img src="/public/img/ss/lb.png" alt="Laravel Blog" class="s_img" />
+                    
+                </div>
+                <div class="ss_img ss_img_2 ss_selected">
+                    <a href="#2" class="ss_an"><h3 class="ss_h3">Movie Reviews </h3></a>
+                    <img src="/public/img/ss/mr.png" alt="Movie Reviews" class="s_img" />
+                    
+                </div>
+                <div class="ss_img ss_img_3">
+                    <a href="#3" class="ss_an"><h3 class="ss_h3">Notes App </h3></a>
+                    <img src="/public/img/ss/ni.png" alt="Notes App" class="s_img" />
+                    
+                </div>
+                <button class="ss_lr_btn" id="ss_left" onclick="prevImg()">&#10092;</button>
+                <button class="ss_lr_btn" id="ss_right" onclick="nextImg()">&#10093;</button>
+                <div id="slider_controls">
+                    <span class="slide_s slide_s_1" onclick="showImg(1)"></span>
+                    <span class="slide_s slide_s_2 slide_s_selected" onclick="showImg(2)"></span>
+                    <span class="slide_s slide_s_3 " onclick="showImg(3)"></span>
+                </div>
             </div>
         </div>
     </div>
     
-    <div id="portfolio_bg">
-        <div id="portfolio_content">
-            
-            <div id="proj_nav">
-                <button class="proj_nav_btn" id="new_p_d_b" onclick="navigate(new_p_d)">Newest</button>
-                <button class="proj_nav_btn" id="fe_p_d_b" onclick="navigate(fe_p_d)">Front End</button>
-                <button class="proj_nav_btn" id="dv_p_d_b" onclick="navigate(dv_p_d)">Data Visualization</button>
-                <button class="proj_nav_btn" id="be_p_d_b" onclick="navigate(be_p_d)">Back End</button>
-            </div>
-            
-            <div class="pr_anounc" id="new_p_d">
-                <h3 class="pr_anounc_h3">Newest Projects</h3>
-                <p class="pr_anounc_p">Created with main focus on PHP / MySQL / Laravel.</p>
-            </div>
-            
-            <div class="projects" id="new_projects"></div>
-            
-            <div class="pr_anounc" id="fe_p_d">
-                <h3 class="pr_anounc_h3">Front End Projects for Free Code Camp</h3>
-                <p class="pr_anounc_p">Created with main focus on HTML / CSS / JavaScript / jQuery.</p>
-            </div>
-            
-            <div class="projects" id="fccfe_projects"></div>
-            
-            <div class="pr_anounc" id="dv_p_d">
-                <h3 class="pr_anounc_h3">Data Visualization Projects for Free Code Camp</h3>
-                <p class="pr_anounc_p">Created with main focus on D3.js / React.js.</p>
-            </div>
-            
-            <div class="projects" id="fccdv_projects"></div>
-            
-            <div class="pr_anounc" id="be_p_d">
-                <h3 class="pr_anounc_h3">Back End Projects for Free Code Camp</h3>
-                <p class="pr_anounc_p">Created with main focus on Node.js / Express / MongoDB / Mongoose.</p>
-            </div>
-            
-            <div class="projects" id="fccbe_projects"></div>
-            
+    <div id="middle_layer_1_bg">
+        <div id="middle_layer_2_content">
+            <h3 class="middle_h3">For me, it's all about <span class="gold_c">functionality</span>.</h3>
+            <h4 class="middle_h4">Buttons, forms, APIs, data storage and manipulation - that's what I'm interested in the most.</h4>
         </div>
-        <div id="footer">
-            <p>This will be footer</p>
+    </div>
+    
+    <div id="portfolio_layer_1_bg_img">
+        <div id="portfolio_layer_2_bg">
+            <div id="portfolio_layer_3_content">
+                <div id="proj_nav">
+                    <button class="proj_nav_p">Projects:</button>
+                    <button class="proj_nav_btn" id="new_p_d_b" onclick="navigate(new_p_d)">Newest</button>
+                    <button class="proj_nav_btn" id="fe_p_d_b" onclick="navigate(fe_p_d)">Front End</button>
+                    <button class="proj_nav_btn" id="dv_p_d_b" onclick="navigate(dv_p_d)">Data Visualization</button>
+                    <button class="proj_nav_btn" id="be_p_d_b" onclick="navigate(be_p_d)">Back End</button>
+                </div>
+                
+                <div class="pr_anounc" id="new_p_d">
+                    <h3 class="pr_anounc_h3">Newest Projects
+                        <br/>
+                        <span class="pr_anounc_p">Created with main focus on <span class="gold_c">PHP</span> / <span class="gold_c">MySQL</span> / <span class="gold_c">Laravel</span>.</span>
+                    </h3>
+                </div>
+                
+                <div class="projects" id="new_projects"></div>
+                
+                <div class="pr_anounc" id="fe_p_d">
+                    <h3 class="pr_anounc_h3">Front End Projects for Free Code Camp
+                        <br/>
+                        <span class="pr_anounc_p">Created with main focus on <span class="gold_c">HTML</span> / <span class="gold_c">CSS</span> / <span class="gold_c">JavaScript</span> / <span class="gold_c">jQuery</span>.</span>
+                    </h3>
+                </div>
+                
+                <div class="projects" id="fccfe_projects"></div>
+                
+                <div class="pr_anounc" id="dv_p_d">
+                    <h3 class="pr_anounc_h3">Data Visualization Projects for Free Code Camp
+                        <br/>
+                        <span class="pr_anounc_p">Created with main focus on <span class="gold_c">D3.js</span> / <span class="gold_c">React.js</span>.</span>
+                    </h3>
+                </div>
+                
+                <div class="projects" id="fccdv_projects"></div>
+                
+                <div class="pr_anounc" id="be_p_d">
+                    <h3 class="pr_anounc_h3">Back End Projects for Free Code Camp
+                        <br/>
+                        <span class="pr_anounc_p">Created with main focus on <span class="gold_c">Node.js</span> / <span class="gold_c">Express</span> / <span class="gold_c">MongoDB</span> / <span class="gold_c">Mongoose</span>.</span>
+                    </h3>
+                </div>
+                
+                <div class="projects" id="fccbe_projects"></div>
+            </div>
         </div>
+    </div>
+    
+    <div id="footer">
+        <p>This will be footer</p>
     </div>
     
     <div id="btt_btn">&#10092;</div>
