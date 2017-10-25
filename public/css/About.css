@@ -160,14 +160,14 @@ button:focus {
     font-family: 'Montserrat', sans-serif;
     color: #333;
     font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1.1em;
     letter-spacing: 0.05em;
 }
 #quote_author {
     font-family: 'Montserrat', sans-serif;
     color: #8e793e;
     font-weight: 400;
-    font-size: 0.9em;
+    font-size: 0.95em;
     letter-spacing: 0.03em;
 }
 
