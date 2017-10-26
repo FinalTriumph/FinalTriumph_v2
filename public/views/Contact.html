@@ -5,27 +5,49 @@
     <meta charset="UTF-8">
     <title>Contact | Kaspars Andžāns "FinalTriumph"</title>
     <link rel="stylesheet" href="/public/css/Contact.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Prosto+One&amp;subset=latin-ext" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
 <body>
     <div id="head">
-        <div id="h_left">
-            <a href="/">
-                <img src="/public/img/logo_55x55.png" alt="FT Logo" class="left_inl" />
-                <h1 class="left_inl">FinalTriumph</h1>
-            </a>
-        </div>
-        <div id="h_right">
-            <a href="/about" class="h_an">About</a>
-            <a href="/portfolio" class="h_an">Portfolio</a>
-            <a href="/contact" class="h_an" id="h_act_an">Contact</a>
+        <a href="/" class="h_nav_an">Home</a>
+        <a href="/about" class="h_nav_an">About</a>
+        <a href="/portfolio" class="h_nav_an">Portfolio</a>
+        <a href="/contact" class="h_nav_an" id="h_act_an">Contact</a>
+    </div>
+    
+    <div id="top_layer_1_bg_img">
+        <div id="top_layer_2_bg">
+            <div id="top_layer_3_content">
+                <h3 id="top_h">Send a <span class="gold_c">Message</span></h3>
+                <form id="message_form">
+                    <p class="sm_p">Name:</p>
+                    <input type="text" name="name" placeholder="Name ..." class="sm_inp" required />
+                    <p class="sm_p">Email:</p>
+                    <input type="email" name="email" placeholder="Email ..." class="sm_inp" required />
+                    <p class="sm_p">Subject:</p>
+                    <input type="text" name="subject" placeholder="Subject ..." class="sm_inp" required />
+                    <p class="sm_p">Mesage:</p>
+                    <textarea name="message" id="sm_txt" placeholder="Message ..." class="sm_inp" required ></textarea>
+                    <input type="submit" value="Send" id="send_m" />
+                </form>
+            </div>
+            
+            <br />
+            
+            <div id="social_network">
+                <a href="https://twitter.com/FinalTriumph_" class="cont_soc_med" target="_blank"><img src="/public/img/soc/twitter_d.png" alt="Twitter" class="cont_soc_img" />/FinalTriumph_</a>
+                <a href="https://www.facebook.com/kaspars.andzans" class="cont_soc_med" target="_blank"><img src="/public/img/soc/facebook_d.png" alt="Facebook" class="cont_soc_img" />/kaspars.andzans</a>
+                <a href="https://github.com/FinalTriumph" class="cont_soc_med" target="_blank"><img src="/public/img/soc/github_d.png" alt="GitHub" class="cont_soc_img" />/FinalTriumph</a>
+                <a href="https://codepen.io/FinalTriumph/#" class="cont_soc_med" target="_blank"><img src="/public/img/soc/codepen_d.png" alt="CodePen" class="cont_soc_img" />/FinalTriumph</a>
+            </div>
         </div>
     </div>
     
-    
-    <h1>This is "Contact" route.</h1>
+    <div id="footer">
+        <p>This will be footer</p>
+    </div>
 
 </body>
 </html>

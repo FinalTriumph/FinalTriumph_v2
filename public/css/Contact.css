@@ -1,7 +1,44 @@
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background-image: url('/public/img/ab.jpg');
+    background-color: #231f20;
+    font-size: 1em;
+    min-width: 1100px;
+}
+a:focus, 
+button:focus {
+    outline: none;
+}
+#head {
+    background-color: #fafafa;
+    width: 100%;
+    height: 3.2em;
+    padding-top: 1.3em;
+    text-align: center;
+}
+.h_nav_an {
+    color: #231f20;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin: 0em 2em;
+    padding-bottom: 0.1em;
+    border-bottom: 2px solid #eaeaea;
+    transition: all 0.3s ease;
+}
+.h_nav_an:hover {
+    color: #8e793e;
+    border-color: #ad974f;
+}
+#h_act_an {
+    border-color: #8e793e;
+}
+
+/* Top */
+#top_layer_1_bg_img {
+    background-image: url('/public/img/cb.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,67 +46,117 @@ body {
     background-position: center center;
     background-attachment: fixed;
 }
-a {
-    color: #444;
-    text-decoration: none;
+#top_layer_2_bg {
+    background-color: #eaeaea;
+    //background-color: rgba(60, 60, 60, 0.7);
+    background-color: rgba(35, 31, 32, 0.6);
+    margin: 0; 
+    padding: 3.5em;
+    text-align: center;
 }
-h1 {
-    margin-top: 0.9em;
-    color: #222;
-    text-shadow: 0px 1px 1px #fff;
+#top_layer_3_content {
+    width: 95%;
+    max-width: 700px;
+    margin: 0em auto;
+    text-align: left;
 }
-#head {
-    background-color: #eee;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-#h_left,
-#h_right {
+#top_h {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    margin-bottom: 1em;
+    margin-left: 2em;
     display: inline-block;
+    padding: 1.2em 3.2em;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 0.03em;
 }
-#h_left {
-    opacity: 0.9;
-    transition: all 0.3s ease;
+.gold_c {
+    color: #8e793e;
 }
-#h_left:hover {
-    opacity: 1;
+#message_form {
+    background-color: #fafafa;
+    padding: 1em 3em 2em 3em;
 }
-#h_left img {
-    margin: 0.7em 0.5em 0.7em 2.5em;
-    transition: all 0.3s ease;
+.sm_p {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    font-weight: 400;
+    font-size: 0.85em;
+    letter-spacing: 0.03em;
+    margin: 1.5em 0em 0.7em 0.2em;
 }
-#h_left:hover img{
-    margin-right: 1em;
+.sm_inp {
+    width: 95%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85em;
+    padding: 0.7em 0.9em;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid #ddd;
 }
-.left_inl {
+.sm_inp:hover {
+    box-shadow: none;
+    border-color: #bbb;
+}
+.sm_inp:focus {
+    border-color: #999;
+}
+#sm_txt {
+    height: 7em;
+    resize: vertical;
+}
+#send_m {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: #333;
     display: inline-block;
-    vertical-align: middle;
-    font-family: 'Prosto One', cursive;
-    font-weight: normal;
-    font-size: 1.4em;
+    padding: 0.7em 5em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    font-size: 0.8em;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #ddd;
 }
-#h_right {
-    float: right;
-    margin: 2em 3.5em 1em 1em;
+#send_m:hover {
+    //border-color: #ad974f;
+    border-color: #999;
+    color: #8e793e;
 }
-.h_an {
-    border-bottom: 1px solid #fff;
-    transition: all 0.3s ease;
-    padding: 0 0.2em;
-    padding-bottom: 0.2em;
-    margin: 0em 1.2em;
+#social_network {
+    background-color: #fafafa;
+    padding: 1.5em 2.2em 2.5em 2.2em;
+    display: inline-block;
+    margin: 2em auto;
+}
+.cont_soc_med {
+    color: #000;
     font-size: 1em;
-    text-shadow: 0px 1px 1px #fff;
-    -webkit-box-shadow: 0px 3px 4px -4px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0px 3px 4px -4px rgba(0,0,0,0.3);
-    box-shadow: 0px 3px 4px -4px rgba(0,0,0,0.3);
+    letter-spacing: 0.03em;
+    margin: 0em 1.5em;
+    opacity: 0.85;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    
 }
-#h_act_an {
-    border-color: #777;
-    color: #000;
+.cont_soc_med:hover {
+    opacity: 0.95;
+    text-decoration: underline;
 }
-.h_an:hover {
-    border-color: #777;
-    color: #000;
-    padding-bottom: 0.4em;
+.cont_soc_img {
+    height: 2em;
+    margin: 0.6em 0.7em -0.6em 0em;
 }
-/*///////*/
+
+/* Footer */
+#footer {
+    margin: 0;
+    padding: 1em 2em;
+    background-color: #231f20;
+    color: #eaeaea;
+}
