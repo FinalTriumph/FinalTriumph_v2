@@ -10,6 +10,8 @@
 </head>
 
 <body>
+<div id="content_wrapper">
+
     <div id="head">
         <a href="/" class="h_nav_an">Home</a>
         <a href="/about" class="h_nav_an">About</a>
@@ -48,12 +50,40 @@
     </div>
     
     <div id="footer">
-        <p>This will be footer</p>
+        <div id="footer_content">
+            <div id="f_nav_links">
+                <a href="/" class="f_nav_an">Home</a>
+                <a href="/about" class="f_nav_an">About</a>
+                <a href="/portfolio" class="f_nav_an">Portfolio</a>
+                <a href="/contact" class="f_nav_an">Contact</a>
+            </div>
+            <div id="footer_left">
+                <p id="foot_p"><span id="f_year">2017</span> <span id="f_yft_sep">|</span> FinalTriumph</p>
+            </div>
+            <div id="footer_right">
+                <a href="https://github.com/FinalTriumph" class="f_soc_med" target="_blank"><img src="/public/img/soc/github.png" alt="GitHub" class="f_soc_img" /></a>
+                <a href="https://codepen.io/FinalTriumph/#" class="f_soc_med" target="_blank"><img src="/public/img/soc/codepen.png" alt="CodePen" class="f_soc_img" /></a>
+                <a href="https://twitter.com/FinalTriumph_" class="f_soc_med" target="_blank"><img src="/public/img/soc/twitter.png" alt="Twitter" class="f_soc_img" /></a>
+                <a href="https://www.facebook.com/kaspars.andzans" class="f_soc_med" target="_blank"><img src="/public/img/soc/facebook.png" alt="Facebook" class="f_soc_img" /></a>
+            </div>
+        </div>
     </div>
     
     <div id="btt_btn">&#10092;</div>
+    
+</div>
+
+<div id="loading_div">
+    <div id="loading_wrapper">
+        <p id="loading_p">Loading: <span id="l_p">0</span>%</p>
+        <div id="loading_border">
+            <div id="loading"></div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src="/public/js/ImagesLoaded.js"></script>
 <script type="text/javascript" src="/public/js/Project.js"></script>
 
 </body>

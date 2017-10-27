@@ -1,11 +1,7 @@
-/* Font for titles - font-family: 'Montserrat', sans-serif; 
-   Font for regular text - font-family: 'Open Sans', sans-serif;
-*/
-
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #ad974f;
+    background-color: #8e793e;
     background-image: url('/public/img/wb.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -13,6 +9,9 @@ body {
     background-size: cover;
     background-position: center center;
     min-width: 850px;
+}
+#content_wrapper {
+    display: none;
 }
 #content {
     min-height: 100vh;
@@ -82,4 +81,46 @@ body {
 .nav_an:hover {
     color: #8e793e;
     border-color: #ad974f;
+}
+
+/**/
+#loading_div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #231f20;
+    text-align: center;
+    z-index: 999;
+    display: table;
+    height: 100vh;
+    width: 100%;
+}
+#loading_wrapper {
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+#loading_border {
+    height: 17px;
+    width: 300px;
+    border: 1px solid #ddd;
+    background-color: #333;
+    margin: auto;
+    padding: 1px;
+    margin-bottom: 9em;
+}
+#loading {
+    height: 100%;
+    width: 0%;
+    background-color: #eaeaea;
+    transition: width 0.2s ease;
+}
+#loading_p {
+    display: block;
+    color: #eaeaea;
+    font-size: 1.05em;
+    letter-spacing: 0.03em;
+    margin-top: 2em;
 }

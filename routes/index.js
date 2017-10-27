@@ -3,6 +3,7 @@ var passwordHash = require('password-hash');
 var User = require("../models/User");
 var Event = require("../models/Event");
 var Project = require("../models/Project");
+var helper = require('sendgrid').mail;
 
 module.exports = function(app) {
     
@@ -185,4 +186,38 @@ module.exports = function(app) {
         });
     });
     
+    // Email
+    
+    app.post("/email/send", function(req, res) {
+        
+        /* Uncomment when done with popup styling and check before deploying to heroku
+        
+        var name = req.body.name;
+        var email = req.body.email;
+        var m_subject = req.body.subject;
+        var message = req.body.message;
+        
+        var from_email = new helper.Email('no-reply@finaltriumph.eu');
+        var to_email = new helper.Email('final_triumph@outlook.com');
+        var subject = 'FT Mail / Node.js';
+        var content = new helper.Content('text/html', '<p><strong>Name</strong>: '+name+'</p><p><strong>Email</strong>: '+email+'</p><p><strong>Subject</strong>: '+m_subject+'</p><hr /><br /><p><strong>Message:</strong><br />'+message+'</p><br /><hr /><p>Sent from <strong>finaltriumph.eu</strong>(Node.js)</p>');
+        var mail = new helper.Mail(from_email, subject, to_email, content);
+        
+        var sg = require('sendgrid')(process.env.SENDGRID_API_KEY);
+        var request = sg.emptyRequest({
+            method: 'POST',
+            path: '/v3/mail/send',
+            body: mail.toJSON(),
+        });
+        
+        sg.API(request, function(error, response) {
+            if(error) {
+                console.log(error);
+                res.json({"status": "error"});
+            } else {
+                res.json({"status": "sent"});
+            }
+        });*/
+        res.json({ "status": "sent"});
+    });
 };

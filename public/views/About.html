@@ -10,6 +10,8 @@
 </head>
 
 <body>
+<div id="content_wrapper">
+    
     <div id="header">
         <a href="/" class="h_nav_an">Home</a>
         <a href="/about" class="h_nav_an" id="h_act_an">About</a>
@@ -24,10 +26,10 @@
                 <br />
                 <img src="/public/img/photo_170x170.jpg" alr="Photo" id="about_photo" />
                 <div id="about_text">
-                    <p>After finishing school in 2010, I have tried myself in different professional areas, and my <span class="gold_c">goal</span> has always been to find something that I could really <span class="gold_c">enjoy</span> doing and to <span class="gold_c">become good</span> at it.</p>
-                    <p>At some point, when everything else had not gone as expected, I realized that, given my <span class="gold_c">skill set</span>, web development was the only option left that made sense for me to <span class="gold_c">focus</span> on. And since I joined <a href="https://www.freecodecamp.org/" target="_blank">Free Code Camp</a>, on October 10, 2016, and started to learn <span class="gold_c">coding</span>, I am sure that it is exactly what I was looking for. That's why I chose pseudonym "<span class="gold_c">FinalTriumph</span>".</p>
-                    <p>Now I'm still <span class="gold_c">learning</span>, having <span class="gold_c">fun</span> with some practice projects and looking for <span class="gold_c">opportunities</span>, where I could put my already <span class="gold_c">acquired skills</span> to <span class="gold_c">work</span> and to <span class="gold_c">keep learning</span>.</p>
-                    <p>And, besides everything else, for almost <span class="gold_c">10 years</span> I have <span class="gold_c">deep interest</span> about how <span class="gold_c">the universe</span> works, what exactly is <span class="gold_c">universe</span>, how <span class="gold_c">human brain</span> works, how <span class="gold_c">human body</span> functions, what is <span class="gold_c">consciousness</span>, why are <span class="gold_c">we</span> here, where exactly is <span class="gold_c">here</span>, what <span class="gold_c">it's all about</span>, and other topics of this kind, from <span class="gold_c">all possible perspectives</span>.</p>
+                    <p>After finishing school in 2010, I have tried myself in different professional areas, and my goal has always been to find something that I could really enjoy doing and to become good at it.</p>
+                    <p>At some point, when everything else had not gone as expected, I realized that, given my skill set, web development was the only option left that made sense for me to focus on. And since I joined <a href="https://www.freecodecamp.org/" target="_blank">Free Code Camp</a>, on October 10, 2016, and started to learn coding, I am sure that it is exactly what I was looking for. That's why I chose pseudonym "FinalTriumph".</p>
+                    <p>Now I'm still learning, having fun with some practice projects and looking for opportunities, where I could put my already acquired skills to work and to keep learning.</p>
+                    <p>And, besides everything else, for almost 10 years I have deep interest about how the universe works, what exactly is universe, how human brain works, how human body functions, what is consciousness, why are we here, where exactly is here, what it's all about, and other topics of this kind, from all possible perspectives.</p>
                 </div>
                 
                 <div id="bouncing">
@@ -64,13 +66,40 @@
     </div>
     
     <div id="footer">
-        <p>This will be footer</p>
+        <div id="footer_content">
+            <div id="f_nav_links">
+                <a href="/" class="f_nav_an">Home</a>
+                <a href="/about" class="f_nav_an" id="f_act_an">About</a>
+                <a href="/portfolio" class="f_nav_an">Portfolio</a>
+                <a href="/contact" class="f_nav_an">Contact</a>
+            </div>
+            <div id="footer_left">
+                <p id="foot_p"><span id="f_year">2017</span> <span id="f_yft_sep">|</span> FinalTriumph</p>
+            </div>
+            <div id="footer_right">
+                <a href="https://github.com/FinalTriumph" class="f_soc_med" target="_blank"><img src="/public/img/soc/github.png" alt="GitHub" class="f_soc_img" /></a>
+                <a href="https://codepen.io/FinalTriumph/#" class="f_soc_med" target="_blank"><img src="/public/img/soc/codepen.png" alt="CodePen" class="f_soc_img" /></a>
+                <a href="https://twitter.com/FinalTriumph_" class="f_soc_med" target="_blank"><img src="/public/img/soc/twitter.png" alt="Twitter" class="f_soc_img" /></a>
+                <a href="https://www.facebook.com/kaspars.andzans" class="f_soc_med" target="_blank"><img src="/public/img/soc/facebook.png" alt="Facebook" class="f_soc_img" /></a>
+            </div>
+        </div>
     </div>
     
-    
     <div id="btt_btn">&#10092;</div>
+    
+</div>
+    
+<div id="loading_div">
+    <div id="loading_wrapper">
+        <p id="loading_p">Loading: <span id="l_p">0</span>%</p>
+        <div id="loading_border">
+            <div id="loading"></div>
+        </div>
+    </div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script type="text/javascript" src="/public/js/ImagesLoaded.js"></script>
 <script type="text/javascript" src="/public/js/About.js"></script>
 
 </body>
