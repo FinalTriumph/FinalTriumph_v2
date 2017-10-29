@@ -10,9 +10,6 @@ body {
     background-position: center center;
     min-width: 850px;
 }
-#content_wrapper {
-    display: none;
-}
 #content {
     min-height: 100vh;
     background-color: rgba(35, 31, 32, 0.5);
