@@ -2,6 +2,16 @@
 
 <html lang="en">
 <head>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102887794-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-102887794-1');
+    </script>
+    
     <meta charset="UTF-8">
     <title>Portfolio | Kaspars Andžāns "FinalTriumph"</title>
     <link rel="stylesheet" href="/public/css/Portfolio.css">
@@ -18,7 +28,7 @@
         <a href="/portfolio" class="h_nav_an" id="h_act_an">Portfolio</a>
         <a href="/contact" class="h_nav_an">Contact</a>
     </div>
-    
+
     <div id="top_layer_1_bg_img">
         <div id="top_layer_2_bg">
             <div id="top_layer_3_content">
@@ -58,8 +68,8 @@
     
     <div id="middle_layer_1_bg">
         <div id="middle_layer_2_content">
-            <h3 class="middle_h3">For me, it's all about <span class="gold_c">functionality</span>.</h3>
-            <h4 class="middle_h4">Buttons, forms, APIs, data storage and manipulation - that's what I'm interested in the most.</h4>
+            <h3 id="middle_quote">"Skill to do comes of doing."</h3>
+            <p id="quote_author">- Ralph Waldo Emerson</p>
         </div>
     </div>
     
@@ -75,10 +85,7 @@
                 </div>
                 
                 <div class="pr_anounc" id="new_p_d">
-                    <h3 class="pr_anounc_h3">Newest Projects
-                        <br/>
-                        <span class="pr_anounc_p">Created with main focus on <span class="gold_c">PHP</span> / <span class="gold_c">MySQL</span> / <span class="gold_c">Laravel</span>.</span>
-                    </h3>
+                    <h3 class="pr_anounc_h3">Newest Projects</h3>
                 </div>
                 
                 <div class="projects" id="new_projects"></div>
@@ -138,7 +145,7 @@
 
 <div id="loading_div">
     <div id="loading_wrapper">
-        <p id="loading_p">Loading: <span id="l_p">0</span>%</p>
+        <p id="loading_p">Loading ... <span id="l_p">0</span>%</p>
         <div id="loading_border">
             <div id="loading"></div>
         </div>

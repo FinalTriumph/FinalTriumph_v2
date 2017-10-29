@@ -46,7 +46,7 @@ button:focus {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-position: center bottom;
+    background-position: center center;
     background-attachment: fixed;
 }
 #top_layer_2_bg {
@@ -92,21 +92,20 @@ button:focus {
 .sm_inp {
     width: 95%;
     font-family: 'Open Sans', sans-serif;
-    font-size: 0.85em;
-    padding: 0.7em 0.9em;
+    font-size: 0.9em;
+    padding: 0.6em 1em;
     box-shadow: none;
     outline: none;
-    border: 1px solid #ddd;
-    border-color: rgba(142, 121, 62, 0.2);
+    border: 1px solid #eaeaea;
+    border-left: 2px solid #eaeaea;
+    transition: border-color 0.2s ease;
 }
 .sm_inp:hover {
     box-shadow: none;
-    border-color: #bbb;
-    border-color: rgba(142, 121, 62, 0.3);
+    border-left-color: rgba(142, 121, 62, 0.5);
 }
 .sm_inp:focus {
-    border-color: #999;
-    border-color: rgba(142, 121, 62, 0.4);
+    border-color: rgba(142, 121, 62, 0.5);
 }
 .sm_inp[disabled] {
     background-color: rgba(142, 121, 62, 0.3);
@@ -131,8 +130,7 @@ button:focus {
     letter-spacing: 0.03em;
     cursor: pointer;
     transition: all 0.2s ease;
-    border: 1px solid #ddd;
-    border-color: rgba(142, 121, 62, 0.3);
+    border: 1px solid #eaeaea;
 }
 #sending_m {
     pointer-events: none;
@@ -336,4 +334,12 @@ button:focus {
     font-size: 1.05em;
     letter-spacing: 0.03em;
     margin-top: 2em;
+}
+#l_p {
+    display: inline-block;
+    width: 50px;
+    text-align: right;
+    font-size: 1.1em;
+    margin-left: 140px;
+    margin-right: 0.2em;
 }

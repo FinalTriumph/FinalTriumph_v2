@@ -17,12 +17,14 @@ $(document).ready(function() {
     $("#message_form").submit(function(e) {
         e.preventDefault();
         
+        var formRdy = $("#message_form").serialize();
+        
         $("input, textarea").attr("disabled", true);
         
         $("#send_m").hide();
         $("#sending_m").css("opacity", "1");
         
-        $.post(window.location.origin + "/email/send", $("#message_form").serialize(), function(data) {
+        $.post(window.location.origin + "/email/send", formRdy, function(data) {
             if (data.status === "sent") {
                 $("#popup_bg").show();
                 $("#sending_m").html("Message has been successfully sent.");

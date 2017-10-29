@@ -21,7 +21,7 @@ $(document).ready(function() {
                 
                 switch(data[i].category) {
                     case "new": 
-                        catH3 = 'Other Newest Projects<br /><span class="pr_anounc_p">Created with main focus on <span class="gold_c">PHP</span> / <span class="gold_c">MySQL</span> / <span class="gold_c">Laravel</span>.</span>';
+                        catH3 = 'Other Newest Projects';
                         break;
                     case "fccfe": 
                         catH3 = 'Other Front End Projects for Free Code Camp<br /><span class="pr_anounc_p">Created with main focus on <span class="gold_c">HTML</span> / <span class="gold_c">CSS</span> / <span class="gold_c">JavaScript</span> / <span class="gold_c">jQuery</span>.</span>';
@@ -82,4 +82,4 @@ $(document).ready(function() {
         }, 700);
     });
     
-})
+});

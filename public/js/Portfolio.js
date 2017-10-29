@@ -156,8 +156,4 @@ $(document).ready(function() {
         }, 700);
     });
     
-    /*$('body').waitForImages(true).done(function() {
-        alert("Images Loaded");
-    });*/
-    
 });
