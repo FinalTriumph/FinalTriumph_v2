@@ -15,7 +15,7 @@ $(document).ready(function() {
             if (data[i]._id === id) {
                 
                 $("#single_project").append('<div id="sp_div_left"><h3 id="sp_h3">'+data[i].title+'</h3><p id="sp_p">'+data[i].description+'</p><div id="sp_lang">'+langDiv+'</div></div><div id="sp_div_right"><img src="'+data[i].image+'" alt="Project Image" id="sp_pr_img" /><br /><a href="'+ data[i].link +'" id="sp_div_an" target="_blank">View Project</a></div>');
-                document.title = data[i].title + ' | Kaspars Andžāns "FinalTriumph"';
+                document.title = data[i].title + ' | FinalTriumph | Web Developer';
                 
                 var catH3;
                 
