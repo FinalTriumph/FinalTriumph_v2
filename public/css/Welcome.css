@@ -38,17 +38,16 @@ body {
 .top_sep {
     font-weight: 400;
     color: #eaeaea;
-    margin: auto 1em;
+    margin: auto 0.7em;
 }
 .h_sep {
-    margin: auto 1.5em;
+    margin: auto 1em;
     color: #eaeaea;
 }
 #h1_ft {
     color: #8e793e;
 }
 .title_h2 {
-    text-transform: uppercase;
     letter-spacing: 0.05em;
     color: #8e793e;
 }
